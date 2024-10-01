@@ -134,7 +134,7 @@ class Hardware(BaseHardware):
   def PollGuiControl(self):	# Called frequently from the GUI thread
     self.ptt_count -= 1
     if self.ptt_count <= 0:
-      self.ptt_count = 200 
+      self.ptt_count = 150 
       reply = self.TransferIn(0xA5, 1)
       if DEBUG:
         print ("PollGuiControl got", reply)
